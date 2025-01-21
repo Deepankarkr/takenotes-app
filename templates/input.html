@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Enter Notes</h2>
+<form method="POST">
+    <div class="mb-3">
+        <textarea class="form-control" name="content" rows="10" placeholder="Write in Markdown..."></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

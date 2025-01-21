@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>My_Notes</h2>
+<a href="/export" class="btn btn-success mb-3">Export as Markdown (.md file )</a>
+<div class="list-group">
+    {% for content in contents %}
+    <div class="list-group-item">
+        <h4>Content ID: {{ content.id }}</h4>
+        <p>{{ content.html_text|safe }}</p>
+        <hr>
+        <a href="/delete/{{ content.id }}" class="btn btn-danger btn-sm float-right">Delete</a>
+        <small>Updated at: {{ content.timestamp.strftime('%Y-%m-%d %H:%M:%S.%f')[:22] }}</small>
+    </div>
+
+    <!-- Dark Separator -->
+    {% if not loop.last %}
+    <div style="background-color: #343a40; height: 4px; margin: 15px 0;"></div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}
