@@ -62,10 +62,8 @@ def export_content():
     markdown_text = ""
 
     for content in contents:
-        markdown_text += f"### Content ID: {content.id}\n"
         markdown_text += f"{content.markdown_text}\n"
-        markdown_text += f"**Updated at:** {content.timestamp.strftime('%Y-%m-%d %H:%M:%S.%f')[:22]}\n\n"
-        markdown_text += "---\n\n"
+        markdown_text += "--- \n\n"
 
     response = make_response(markdown_text)
     response.headers["Content-Disposition"] = "attachment; filename=all_content.md"
