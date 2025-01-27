@@ -1,7 +1,3 @@
-### README for Markdown App
-
----
-
 ## **TakeNotes App**
 
 A simple web application built with Python, Flask, Bootstrap, and SQLite that allows users to input, display, and export content written in Markdown format. The app supports Markdown-to-HTML conversion, timestamped entries, and content export.
